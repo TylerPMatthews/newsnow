@@ -10,7 +10,7 @@ const Search = () => {
     setQuery(e.target.value);
   };
   const searchArticle = () => {
-    axios.get(`http://newsapi.org/v2/everything?q=${query}&apiKey=${API_KEY}`)
+    axios.get(`https://newsapi.org/v2/everything?q=${query}&apiKey=${API_KEY}`)
     .then(res=>{
         setSearchedArticles(res.data.articles)
     })

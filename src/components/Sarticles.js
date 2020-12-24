@@ -11,6 +11,7 @@ const Sarticles = (props) => {
       </div>
       <p>{props.item.content}</p>
     </div>
+   
   );
 };
 export default Sarticles;

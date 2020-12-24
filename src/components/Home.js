@@ -2,8 +2,9 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import HomeArticles from "./HomeArticles";
 import {API_KEY} from '../key/index';
-import { Route, Switch } from "react-router-dom";
+import { Route } from "react-router-dom";
 import Header from "./Header/Header";
+import Sarticles from "./Sarticles";
 const Home = () => {
   const [articles, setArticles] = useState([]);
 
@@ -26,11 +27,8 @@ const Home = () => {
       {articles.map((item, idx) => {
         return <HomeArticles key={idx} item={item} />;
       })}
-      <Switch>
-        <Route>
-          
-        </Route>
-      </Switch>
+      
+        
     </div>
     </>
   );

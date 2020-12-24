@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import HomeArticles from "./HomeArticles";
+import {API_KEY} from '../key/index';
+import { Route, Switch } from "react-router-dom";
+import Header from "./Header/Header";
 const Home = () => {
   const [articles, setArticles] = useState([]);
 
   useEffect(() => {
     axios
       .get(
-        "http://newsapi.org/v2/top-headlines?country=us&apikey=0c8f353266ce4a9498aa188a95bf06e5"
+        `http://newsapi.org/v2/top-headlines?country=us&apikey=${API_KEY}`
       )
       .then((res) => {
         setArticles(res.data.articles);
@@ -17,11 +20,19 @@ const Home = () => {
       });
   }, []);
   return (
+    <>
+    <Header />
     <div>
       {articles.map((item, idx) => {
         return <HomeArticles key={idx} item={item} />;
       })}
+      <Switch>
+        <Route>
+          
+        </Route>
+      </Switch>
     </div>
+    </>
   );
 };
 export default Home;

@@ -15,7 +15,7 @@ const Search = () => {
         setSearchedArticles(res.data.articles)
     })
     .catch(err=>{
-        console.log('axios search error', err.message)
+        console.log('axios search error has occured', err.message)
     })
   };
   const onSubmit = (e) => {

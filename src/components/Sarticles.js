@@ -1,6 +1,5 @@
 import React from "react";
-
-const HomeArticles = (props) => {
+const Sarticles = (props) => {
   return (
     <div>
       <h2>{props.item.source.name}</h2>
@@ -12,7 +11,6 @@ const HomeArticles = (props) => {
       </div>
       <p>{props.item.content}</p>
     </div>
-    //Add a share new story button
   );
 };
-export default HomeArticles;
+export default Sarticles;

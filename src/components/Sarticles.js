@@ -7,7 +7,7 @@ const Sarticles = (props) => {
       <h3>{props.item.title}</h3>
       <p>{props.item.description}</p>
       <div>
-        <img src={props.item.urlToImage} />
+        <img src={props.item.urlToImage} alt='news'/>
       </div>
       <p>{props.item.content}</p>
     </div>

@@ -10,7 +10,7 @@ const Home = () => {
   useEffect(() => {
     axios
       .get(
-        `http://newsapi.org/v2/top-headlines?country=us&apikey=${API_KEY}`
+        `https://newsapi.org/v2/top-headlines?country=us&apikey=${API_KEY}`
       )
       .then((res) => {
         setArticles(res.data.articles);
